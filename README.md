@@ -12,6 +12,14 @@
 
 ## Java
 
+Cycle de vie d'un Thread :
+NEW, avant l'appel à ``start()``
+RUNNABLE, en cours d'exécution ou prêt à l'être
+BLOCKED, en attente de moniteur
+WAITING, en attente d'un autre thread
+TIMED_WAITING, en attente d'un autre thread avec un temps maximal
+TERMINATED, l'exécution est terminée, normalement ou non
+
 ### Java 17
 
 ```java
