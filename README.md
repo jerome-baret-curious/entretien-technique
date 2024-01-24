@@ -30,6 +30,8 @@ Ajout de comportements à un code existant. Cela permet de séparer les logiques
 
 Propagation du changement
 
+Optimise le temps CPU, lequel est coûteux
+
 ## Java
 
 JVM : machine virtuelle exécutant le bytecode Java
@@ -180,7 +182,8 @@ Les virtual threads pour les applications concurrentes à haut débit.
 
 ### Spring
 
-Différences ApplicationContext et BeanFactory
+La ``BeanFactory`` fournit un mécanisme de configuratio capable de gérer n'importe quel objet. L'``ApplicationContext`` ajoute une intégration à Spring AOP, l'internationalisation,
+la publication d'événements et des contextes spécifiques.
 
 #### Spring Boot
 
@@ -215,6 +218,12 @@ FormControl
 ngModel
 
 ### Angular router
+
+#### Nested routes
+
+#### Lazy loading
+
+#### Guards
 
 ## RxJS
 
