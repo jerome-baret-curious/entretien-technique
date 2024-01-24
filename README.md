@@ -2,22 +2,55 @@
 
 ## POO
 
+Abstraction, encapsulation, composition, héritage, polymorphisme, récursion ouverte (les méthodes d'objet peuvent appeler des méthodes du même objet)
+
+Single responsibility : au maximum une raison de changer une classe
+
+Open-closed : ouverture aux extensions, mais fermeture aux modifications
+
+Substitution de Liskov : un objet de classe T peut être remplacé par un objet d'une classe S dérivée de T
+
+Ségrégation des interfaces : le code ne doit pas être forcé de dépendre de méthodes qu'il n'utilise pas (=> faire de petites interfaces)
+
+Inversion de dépendances : dépendances envers des abstractions
+
 ## Programmation fonctionnelle
+
+Fonctions de première classe, d'ordre supérieur, pures, récursivité, évaluation stricte ou non, typage, transparence référentielle (les variables sont constantes), structures de données
 
 ## Programmation événementielle
 
+Exécution d'une fonction en réaction à un événement, généralement grâce à une boucle qui attend les événements
+
 ## Programmation orientée aspect
+
+Ajout de comportements à un code existant. Cela permet de séparer les logiques
 
 ## Programmation réactive
 
+Propagation du changement
+
 ## Java
 
+JVM : machine virtuelle exécutant le bytecode Java
+
+JRE : environnement d'exécution Java (JVM + lib)
+
+JDK : des libs et des outils dont le compilateur
+
+
 Cycle de vie d'un Thread :
+
 NEW, avant l'appel à ``start()``
+
 RUNNABLE, en cours d'exécution ou prêt à l'être
+
 BLOCKED, en attente de moniteur
+
 WAITING, en attente d'un autre thread
+
 TIMED_WAITING, en attente d'un autre thread avec un temps maximal
+
 TERMINATED, l'exécution est terminée, normalement ou non
 
 ### Java 17
