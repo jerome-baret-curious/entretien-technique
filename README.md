@@ -168,6 +168,10 @@ class Cartesian {
 
 Les virtual threads pour les applications concurrentes à haut débit.
 
+### REST
+
+Stateless, cachable, client-serveur, en couche, interface uniforme (identification des ressources, manipulations par des représentations, messages autodescriptifs, HATEOAS)
+
 ### Spring
 
 La ``BeanFactory`` fournit un mécanisme de configuratio capable de gérer n'importe quel objet. L'``ApplicationContext`` ajoute une intégration à Spring AOP, l'internationalisation,
@@ -189,7 +193,15 @@ Différences avec Spring Boot
 
 ## Hibernate
 
+@Entity  
+@Id  
+@Table  
+@OneToMany et @ManyToOne  
+@ManyToMany
+
 ## Angular
+
+[Architecture en couche](https://blog.angular-university.io/angular-2-smart-components-vs-presentation-components-whats-the-difference-when-to-use-each-and-why/)
 
 ### Cycle de vie des composants
 
