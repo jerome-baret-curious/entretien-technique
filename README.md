@@ -203,6 +203,11 @@ Différences avec Spring Boot
 
 [Architecture en couche](https://blog.angular-university.io/angular-2-smart-components-vs-presentation-components-whats-the-difference-when-to-use-each-and-why/)
 
+Change Detection Strategy :  
+- default : déclenché sur tout l'arbre sur événements, promesses, timers, changement de propriété ou manuellement
+- OnPush : déclenché manuellement ou sur changement de références d'input, sur un événement du sous-arbre
+  ou une émission du pipe ``async`` (car appelle la détection de changement)
+
 ### Cycle de vie des composants
 
 ### Injection de dépendances
