@@ -6,9 +6,9 @@ Abstraction, encapsulation, composition, héritage, polymorphisme, récursion ou
 
 Single responsibility : au maximum une raison de changer une classe  
 Open-closed : ouverture aux extensions, mais fermeture aux modifications  
-Substitution de Liskov : un objet de classe T peut être remplacé par un objet d'une classe S dérivée de T  
-Ségrégation des interfaces : le code ne doit pas être forcé de dépendre de méthodes qu'il n'utilise pas (=> faire de petites interfaces)  
-Inversion de dépendances : dépendances envers des abstractions
+Liskov substitution : un objet de classe T peut être remplacé par un objet d'une classe S dérivée de T  
+Interface segregation : le code ne doit pas être forcé de dépendre de méthodes qu'il n'utilise pas (=> faire de petites interfaces)  
+Dependency inversion : dépendances envers des abstractions
 
 ## Programmation fonctionnelle
 
@@ -179,6 +179,10 @@ la publication d'événements et des contextes spécifiques.
 
 #### Spring Boot
 
+Facilite la création d'applications stand-alone de grade production basées sur Spring. Permet de commencer rapidement grâce à une vision "opinionnée" de Spring et de bibliothèques.
+Peut embarquer un serveur, de la sécurité, des métriques, etc. La configuration par défaut se surcharge aisément.  
+Les applications peuvent se lancer par un `jar` habituel ou un déploiement `war`.
+
 #### Spring MVC
 
 #### Spring Data
@@ -186,6 +190,8 @@ la publication d'événements et des contextes spécifiques.
 #### Spring Security
 
 #### Spring Batch
+
+Un `Job` a un ou plusieurs `Step`, chacun ayant un `ItemReader`, un `ItemProcessor` et un `ItemWriter`. Un `Job` est lancé par un `JobLauncher` et les métadonnées sont dans un `JobRepository`.
 
 ### Quarkus
 
