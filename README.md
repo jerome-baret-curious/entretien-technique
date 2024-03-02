@@ -187,6 +187,28 @@ Les applications peuvent se lancer par un `jar` habituel ou un déploiement `war
 
 #### Spring Data
 
+Dérivation des requêtes à partir des noms de méthodes du `Repository`. Une classe annotée `@Repository` est éligible à la traduction des exceptions en `DataAccessException`.
+Supporte l'audit (créateur, modificateur).
+
+##### Spring Data JPA
+
+`@Transactional` rollback, par défaut, sur une `RuntimeException` et une `Error`.  
+Les isolations sont :
+- READ_UNCOMMITTED : tous les phénomènes sont permis
+- READ_COMMITTED : dirty read interdits
+- REPEATABLE_READ : dirty read et non-repeatable reads interdits
+- SERIALIZABLE : dirty read, non-repeatable reads et phantom reads interdits
+
+Il est possible de préciser pour quels `Throwable` rollbacker ou non, de suggérer que la transaction est une lecture seule et de préciser un timeout.
+La propagation peut être :
+- MANDATORY : lève une exception si pas de transaction
+- NESTED : crée une transaction dans une transaction, sinon crée une transaction
+- NEVER : lève une exception si présence de transaction
+- NOT_SUPPORTED : s'exécute hors transaction, suspend la transaction le cas échéant
+- REQUIRED (défaut) : crée une transaction si besoin
+- REQUIRES_NEW : crée une nouvelle transaction, suspend l'actuelle si besoin
+- SUPPORTS : peu importe
+
 #### Spring Security
 
 #### Spring Batch
