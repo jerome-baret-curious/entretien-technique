@@ -174,7 +174,7 @@ Stateless, cachable, client-serveur, en couche, interface uniforme (identificati
 
 ### Spring
 
-La ``BeanFactory`` fournit un mécanisme de configuratio capable de gérer n'importe quel objet. L'``ApplicationContext`` ajoute une intégration à Spring AOP, l'internationalisation,
+La ``BeanFactory`` fournit un mécanisme de configuration capable de gérer n'importe quel objet. L'``ApplicationContext`` ajoute une intégration à Spring AOP, l'internationalisation,
 la publication d'événements et des contextes spécifiques.
 
 #### Spring Boot
@@ -184,6 +184,8 @@ Peut embarquer un serveur, de la sécurité, des métriques, etc. La configurati
 Les applications peuvent se lancer par un `jar` habituel ou un déploiement `war`.
 
 #### Spring MVC
+
+Composant de Spring Framework
 
 #### Spring Data
 
@@ -210,6 +212,12 @@ La propagation peut être :
 - SUPPORTS : peu importe
 
 #### Spring Security
+
+La requête passe une `FilterChain` puis atteint la `DispatcherServlet`. Spring s'insère dans la FilterChain avec un `DelegatingFilterProxy` (fournie par Spring Framework).
+Les filtres peuvent alors être des beans lazy-loadés (les filtres doivent être enregistrés avant).  
+Spring Security fournit `FilterChainProxy` qui s'inscrit dans `DelegatingFilterProxy`. Ce proxy est configuré par une `SecurityFilterChain` (ou plusieurs, mais une seule reçoit la requête) et protège contre certaines attaques.  
+A la différence des filtres Servlet, les filtres enregistrés dans une `SecurityFilterChain` peuvent être invoqués selon la `HttpServletRequest` et non seulement l'URL.
+Parme les filtres standards, il y a ceux de l'authentification, de l'autorisation, etc.
 
 #### Spring Batch
 
