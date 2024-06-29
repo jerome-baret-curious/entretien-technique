@@ -232,7 +232,9 @@ Un `Job` a un ou plusieurs `Step`, chacun ayant un `ItemReader`, un `ItemProcess
 
 ### Quarkus
 
-Différences avec Spring Boot
+Proche de Spring Boot.  
+En compilation native, l'exécutable a une moindre empreinte mémoire et un temps de démarrage plus court. La différence de performances est à mesurer à cause de l'absence de JIT.  
+L'absence de JIT ne permet plus d'optimiser à l'exécution en fonction des statistiques d'utilisation des méthodes.
 
 ## Hibernate
 
