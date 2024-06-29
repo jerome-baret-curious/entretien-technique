@@ -172,6 +172,13 @@ Les virtual threads pour les applications concurrentes à haut débit.
 
 Stateless, cachable, client-serveur, en couche, interface uniforme (identification des ressources, manipulations par des représentations, messages autodescriptifs, HATEOAS)
 
+#### Pattern Saga
+
+Une saga est une séquence de transactions locales. A la fin d'une transaction, un événement est publié pour lancer la transaction suivante.  
+Si l'une rollback, des transactions de compensation sont lancées.
+- Chorégraphie : chaque transaction publie des événements pour les autres services.
+- Orchestration : l'orchestrateur indique aux services les transactions à exécuter.
+
 ### Spring
 
 La ``BeanFactory`` fournit un mécanisme de configuration capable de gérer n'importe quel objet. L'``ApplicationContext`` ajoute une intégration à Spring AOP, l'internationalisation,
