@@ -255,6 +255,14 @@ Change Detection Strategy :
 
 ### Cycle de vie des composants
 
+- ngOnInit : appelée une fois et après l'initialisation des inputs
+- ngOnChanges : appelée si la détection de changements par défaut à repéré un changement
+- ngDoCheck : il est possible de détecter et réagir à des changements non repérés par la détection par défaut (lancée avant cette fonction)
+- ngAfterContentInit : appelée après l'initialisation du contenu projeté
+- ngAfterContentChecked : appelée après la vérification du contenu projeté
+
+La détection de changements par défaut repère les inégalités strictes des expressions utilisées dans le template.
+
 ### Injection de dépendances
 
 ### Formulaires
