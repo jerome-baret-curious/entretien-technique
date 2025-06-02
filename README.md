@@ -253,6 +253,8 @@ Change Detection Strategy :
 - OnPush : déclenché manuellement ou sur changement de références d'input, sur un événement du sous-arbre
   ou une émission du pipe ``async`` (car appelle la détection de changement)
 
+Avec Zone.js, la détection de changements est exécutée automatiquement lorsque la file des microtasks devient vide.
+
 ### Cycle de vie des composants
 
 - ngOnInit : appelée une fois et après l'initialisation des inputs
